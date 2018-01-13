@@ -10,4 +10,4 @@ def get_string
 end
 
 string = get_string
-puts count_vowel string
+puts count_vowel "string"

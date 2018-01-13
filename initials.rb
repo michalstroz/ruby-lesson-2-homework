@@ -24,7 +24,6 @@ class Name
         initials_string += word.chars.first.upcase
       end
       return  initials_string
-
     else
       puts "Podano złą wartość"
     end
