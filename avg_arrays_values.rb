@@ -1,11 +1,8 @@
 #!/usr/bin/env ruby
 
 def avg_array *args
-   args.map do |array|
-     array_length = array.length.to_f
-     array_sum = array.inject(0){ |sum, x| sum + x }.to_f
-     array_avg = (array_sum/array_length)
-   end
+   arrays_quantity = args.length.to_f
+   args.transpose.map {|x| ((x.reduce(:+))/arrays_quantity).to_f }
 end
 
 print "#{avg_array([1, 3, 5], [3, 5, 7])}\n"

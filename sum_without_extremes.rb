@@ -3,11 +3,7 @@
 def sum_array array
   array.delete(array.max)
   array.delete(array.min)
-  if array.empty?
-    return 0
-  else
-    array.inject{ |sum, x| sum + x }
-  end
+  array.inject(0){ |sum, x| sum + x }
 end
 
-puts sum_array ([12, 4])
+puts sum_array ([12, 4, 5, 9, 10])
